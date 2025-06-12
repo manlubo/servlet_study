@@ -6,14 +6,16 @@ import javax.sql.DataSource;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
+
 public class HikariCPUtil {
 	private static HikariDataSource dataSource;
 	static {
 		HikariConfig config = new HikariConfig();
-		config.setJdbcUrl("jdbc:mariadb://np.gitbaby.com:3306/pbl");
+		config.setJdbcUrl("jdbc:log4jdbc:mariadb://np.gitbaby.com:3306/pbl");
 		config.setUsername("sample");
 		config.setPassword("1234");
-		config.setDriverClassName("org.mariadb.jdbc.Driver");
+//		config.setDriverClassName("org.mariadb.jdbc.Driver");
+		config.setDriverClassName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy");
 		
 		config.setMaximumPoolSize(10);
 		config.setMinimumIdle(5);
