@@ -1,12 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+	.red{color: red}
+</style>
 </head>
 <body>
-	<h1>웰컴 파일</h1>
+	<h1>나는 인덱스</h1>
+	<%@ include file="title.jsp" %>
+	<%=request.getParameter("v") %>
 </body>
-</html>  
+</html>

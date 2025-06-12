@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>웰컴 파일</h1>
+	<%-- <h3>${num}</h3> --%>
+	<h3><%=request.getAttribute("num") %></h3>
 </body>
-</html>  
+</html>

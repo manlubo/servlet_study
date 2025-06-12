@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>웰컴 파일</h1>
+<h1>내 응답도 보여줘!</h1>
+<%
+	System.out.println(request.getParameter("v"));
+	request.getRequestDispatcher("index.jsp").forward(request, response);
+%>
 </body>
-</html>  
+</html>

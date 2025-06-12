@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>웰컴 파일</h1>
+<%
+	response.sendRedirect("index.jsp");
+%>
 </body>
-</html>  
+</html>
