@@ -1,0 +1,49 @@
+/* common */
+html {overflow-x: hidden; scroll-behavior: smooth;}
+body {margin: 0;}
+a {text-decoration: none; color: #222;}
+header, footer {padding: 1em; background-color: #222; color: #eee; text-align: center;}
+.container {width: 1200px; margin: 0 auto;}
+.resize-none {resize: none;}
+
+/* cke 경고 무시 */
+.cke_notifications_area {display: none !important;}
+
+/* nav */
+nav { background-color: #eee;}
+nav ul {margin: 0; padding: 0;}
+nav li {display: inline;}
+nav li a {display: inline-block; padding: 1em; width: 140px; text-align: center;}
+nav li a:hover {background-color: #222; color: #eee; text-decoration: underline;}
+
+/* main */
+main {padding: 1em; min-height: calc(100vh - 256px);}
+/* 헤더 121, 푸터 112 */
+
+main .content {height: 500px; width: 768px; float: left; padding: 20px; box-sizing: border-box;}
+main aside {width: 384px; float: left; margin-left: 16px; box-sizing: border-box; }
+
+/* main account */
+main .account{
+    box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0 , .4); border-radius: 8px;
+    padding: 21px 20px 18px;
+}
+.account > * {font-family: '맑은 고딕';}
+.account p {margin: 0; text-align: center; font-size: 15px;}
+.account > a {display: block; background-color: #03c75a; color: #fff; padding: 17px 0; text-align: center; margin-top: 13px; border-radius: 4px; font-size: 14.7px;}
+.account > a:hover { background-color: #17b75e;}
+.account > a i {display: inline-block; width: 72px; height: 14px; text-indent: -9999px; overflow: hidden; margin: 3px 8px 0 0;  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.04eb92b7.png);
+background-size: 463px 442px;
+background-position: 0px -301px;
+background-repeat: no-repeat;
+vertical-align: top;
+}       
+.account div a {font-size: 13.65px; color: #606060;}
+.account div a:hover {text-decoration: underline;}
+.account div {text-align: center; margin-top: 16px;}
+.account div i {width: 1px; height: 12px; background: #d3d5d7; margin: 4px 8px 0; display: inline-block;}
+main::after {display: block; content: ''; clear: both;}
+
+/* misc */
+.arrow-area i {position: fixed; bottom: 100px; right: 20px; font-size: 3em; border-radius: 50%; color: #888; transition: all .3s; display: none; border-radius: 9999px; background-color: #fff;}
+.arrow-area i:hover{box-shadow: 0 0 6px #ccc; color: #222;}
