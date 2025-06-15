@@ -12,7 +12,6 @@ import domain.Member;
 
 
 public interface MemberMapper {
-	@Select("select * from tbl_review")
 	List<Member> select();
 	
 	Member findByNo(Long mno);

@@ -5,9 +5,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+	<style>
+		* {font-family: Pretendard}
+		legend {font-weight: bold;}
+		form {width: 400px; margin: auto;}
+		button {padding: 10px 20px;}
+	</style>
 </head>
 <body>
-	<form method="post">
+	<form method="post">	
 		<fieldset>
 			<legend>회원가입</legend>
 			<p>아이디</p>
