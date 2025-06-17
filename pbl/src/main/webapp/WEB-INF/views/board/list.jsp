@@ -15,7 +15,7 @@
         <!-- content -->
         <main>
             <div class="clearfix">
-                <button class="btn btn-dark btn-sm float-end mb-3"><i class="fa-solid fa-pen pe-1 small"></i> 글쓰기</button>
+                <a href="write" class="btn btn-dark btn-sm float-end mb-3"><i class="fa-solid fa-pen pe-1 small"></i> 글쓰기</a>
             </div>
             <div class="list-group">
                 
