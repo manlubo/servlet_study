@@ -13,7 +13,7 @@ import service.MemberService;
 
 @WebServlet("/signup")
 public class SignupServlet extends HttpServlet{
-
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.getRequestDispatcher("signup.jsp").forward(req, resp);
