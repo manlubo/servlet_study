@@ -4,13 +4,34 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
  <mapper namespace="mapper.BoardMapper">
  	<insert id="insert">
- 		insert into tbl_board(id, title, content, cno) values (#{id}, #{title}, #{content}, #{cno})
+ 		insert into 
+ 		tbl_board(id, title, content, cno) 
+ 		values (#{id}, #{title}, #{content}, #{cno})
  	</insert>
  	<select id="list" resultType="domain.Board">
- 		select * from tbl_board
+ 		select * 
+ 		from tbl_board
+ 		where cno = #{cno}
+ 		<!-- <foreach collection="types">
+ 			<if test="">
+	 			and title like concat('%', #{keyword}, '%'); 
+ 			</if>
+ 		</foreach> -->
+ 		
+ 		
+ 		order by bno desc 
+ 		limit #{amount} 
+ 		offset #{offset}
  	</select>
  	<select id="selectOne" resultType="board">
- 		select * from tbl_board where bno = #{bno}
+ 		select * 
+ 		from tbl_board 
+ 		where bno = #{bno}
  	</select>
- 	
+ 	<select id="getCount" resultType="long">
+ 		select count(*) from tbl_board where cno = #{cno}
+ 	</select>
+ 	<!-- 
+ 		#{var} = '${var}'
+ 	 -->
  </mapper>

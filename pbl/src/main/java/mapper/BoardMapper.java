@@ -4,14 +4,15 @@ import java.util.List;
 
 
 import domain.Board;
+import domain.dto.Criteria;
 
 
 public interface BoardMapper {
-	List<Board> list();
+	List<Board> list(Criteria cri);
 	
 	Board selectOne(Long bno);
 	
-	
+	long getCount(Criteria cri);
 	
 	int insert(Board board);
 	

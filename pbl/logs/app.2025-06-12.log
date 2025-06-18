@@ -1,0 +1,32 @@
+11:19:16.097 [main] INFO  sqltiming - select * from tbl_member where id = 'qwer';
+ {executed in 8 msec}
+11:19:16.121 [main] INFO  resultsettable - 
+|---|-----|-----|-----|------|--------------------|
+|no |id   |pw   |name |email |regdate             |
+|---|-----|-----|-----|------|--------------------|
+|1  |qwer |1234 |null |null  |2025-06-11 18:10:07 |
+|---|-----|-----|-----|------|--------------------|
+
+11:19:16.140 [main] INFO  MemberService - Member(mno=1, id=qwer, pw=1234, name=null, email=null, regdate=2025-06-11 18:10:07)
+11:54:08.955 [main] INFO  sqltiming - insert into tbl_member(id, pw, name, email) values ('qwer', '$2a$10$lfj/XXLlOHaT9JMAthG45e.GaYx34g5PRvosK7P6AKbSJaBPnMLXi', 'qwer', NULL);
+ {executed in 7 msec}
+12:16:19.902 [main] INFO  sqltiming - select * from tbl_member where id = 'qwer';
+ {executed in 8 msec}
+12:16:19.925 [main] INFO  resultsettable - 
+|---|-----|-------------------------------------------------------------|-----|------|--------------------|
+|no |id   |pw                                                           |name |email |regdate             |
+|---|-----|-------------------------------------------------------------|-----|------|--------------------|
+|3  |qwer |$2a$10$lfj/XXLlOHaT9JMAthG45e.GaYx34g5PRvosK7P6AKbSJaBPnMLXi |qwer |null  |2025-06-12 11:54:08 |
+|---|-----|-------------------------------------------------------------|-----|------|--------------------|
+
+12:16:20.120 [main] INFO  MemberService - true
+12:16:20.127 [main] INFO  sqltiming - select * from tbl_member where id = 'qwer';
+ {executed in 5 msec}
+12:16:20.129 [main] INFO  resultsettable - 
+|---|-----|-------------------------------------------------------------|-----|------|--------------------|
+|no |id   |pw                                                           |name |email |regdate             |
+|---|-----|-------------------------------------------------------------|-----|------|--------------------|
+|3  |qwer |$2a$10$lfj/XXLlOHaT9JMAthG45e.GaYx34g5PRvosK7P6AKbSJaBPnMLXi |qwer |null  |2025-06-12 11:54:08 |
+|---|-----|-------------------------------------------------------------|-----|------|--------------------|
+
+12:16:20.208 [main] ERROR MemberService - false
