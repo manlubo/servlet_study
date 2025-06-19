@@ -13,23 +13,28 @@
 <%@ include file="../common/nav.jsp" %>
 <div class="container p-0">
 	<main>
-        <form method="post">
+        <form method="post" action="modify" onsubmit="return confirm('수정하시겠습니까?')">
             <div class="container d-flex flex-column my-4 p-0">
                 <div class="p-2 px-3 border-bottom border-2 border-black mb-3">
-                    <a href="board.html" class="fw-bold">게시글 작성</a>
+                    <a href="board.html" class="fw-bold">게시글 수정</a>
                 </div>
                 <div class="small p-2 text-center border border-bottom-0" id="editer">
-                    <input type="text" name="title" id="title" class="form-control" placeholder="제목">
+                    <input type="text" name="title" id="title" class="form-control" placeholder="제목" value="${board.title }">
                 </div>
                 <div class="mb-5">
-                    <textarea name="content" id="editor1" class="form-control resize-none"></textarea>
+                    <textarea name="content" id="editor1" class="form-control resize-none">${board.content}</textarea>
                 </div>
                 <div class="m-2 mt-3">
                 	<a href="list?${cri.qs2 }" class="btn btn-secondary btn-sm float-end "> 취소</a>
-                    <button class="btn btn-dark btn-sm float-end me-2"><i class="fa-solid fa-pen pe-1 small"></i> 글쓰기</button>
+                    <button class="btn btn-dark btn-sm float-end me-2"><i class="fa-solid fa-pen pe-1 small "></i> 글 수정</button>
                 </div>
                 <input type="hidden" name="id" value="${member.id }" />
-                <input type="hidden" name="cno" value="2" />
+                <input type="hidden" name="bno" value="${board.bno }" />
+                <input type="hidden" name="cno" value="${cri.cno }" />
+                <input type="hidden" name="page" value="${cri.page }" />
+                <input type="hidden" name="amount" value="${cri.amount }" />
+                <input type="hidden" name="type" value="${cri.type }" />
+                <input type="hidden" name="keyword" value="${cri.keyword }" />
             </div>
 
         </form>

@@ -14,9 +14,11 @@ public interface BoardMapper {
 	
 	long getCount(Criteria cri);
 	
-	int insert(Board board);
+	void insert(Board board);
 	
-	int delete(Long bno);
+	void update(Board board);
 	
-	int update(Board board);
+	void delete(Long bno);
+	
+	
 }

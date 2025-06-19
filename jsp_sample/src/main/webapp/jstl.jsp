@@ -23,7 +23,7 @@
 </c:if>
 <c:choose>
 	<c:when test="${setMember.name == '개똥이' }">
-		<h3>이름은 개똥이입니다.</h1>
+		<h3>이름은 개똥이입니다.</h3>
 	</c:when>
 	<c:otherwise>
 		<h3>이름은 개똥이가 아닙니다.</h3>
