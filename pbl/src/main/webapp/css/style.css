@@ -17,7 +17,7 @@ nav li a {display: inline-block; padding: 1em; width: 140px; text-align: center;
 nav li a:hover {background-color: #222; color: #eee; text-decoration: underline;}
 
 /* main */
-main {padding: 1em; min-height: calc(100vh - 256px);}
+main {min-height: calc(100vh - 256px);}
 /* 헤더 121, 푸터 112 */
 
 main .content {height: 500px; width: 768px; float: left; padding: 20px; box-sizing: border-box;}
@@ -47,4 +47,6 @@ main::after {display: block; content: ''; clear: both;}
 /* misc */
 .arrow-area i {position: fixed; bottom: 100px; right: 20px; font-size: 3em; border-radius: 50%; color: #888; transition: all .3s; display: none; border-radius: 9999px; background-color: #fff;}
 .arrow-area i:hover{box-shadow: 0 0 6px #ccc; color: #222;}
+
+
 

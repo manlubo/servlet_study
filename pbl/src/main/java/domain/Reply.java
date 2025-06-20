@@ -1,10 +1,13 @@
 package domain;
 
+import org.apache.ibatis.type.Alias;
+
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
+@Alias("reply")
 public class Reply {
 	private Long rno; // 댓글 번호
 	private String content; // 컨텐츠

@@ -1,0 +1,720 @@
+10:49:55.818 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 9 msec}
+10:50:06.511 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 9 msec}
+10:50:18.301 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 10 msec}
+10:51:35.700 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 8 msec}
+10:51:35.727 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+10:58:25.668 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 0
+ {executed in 7 msec}
+10:58:30.282 [main] INFO  BoardMapperTest - [Board(bno=1755, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1754, title=제목, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1753, title=제목1, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1752, title=제목2, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1751, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1750, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1749, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1748, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1747, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1746, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2)]
+10:58:30.307 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 7 msec}
+10:58:30.309 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+11:00:10.794 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 8 msec}
+11:00:10.824 [main] INFO  BoardMapperTest - [Board(bno=1735, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1734, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1733, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1732, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1731, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1730, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1729, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1728, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1727, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2), Board(bno=1726, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-18 09:52:03, moddate=2025-06-18 09:52:03, cnt=0, cno=2)]
+11:00:10.864 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 5 msec}
+11:00:10.866 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+11:01:29.195 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 9 msec}
+11:01:29.221 [main] INFO  BoardMapperTest - 테스트 게시글
+11:01:29.223 [main] INFO  BoardMapperTest - 테스트 게시글
+11:01:29.223 [main] INFO  BoardMapperTest - 테스트 게시글
+11:01:29.223 [main] INFO  BoardMapperTest - 테스트 게시글
+11:01:29.223 [main] INFO  BoardMapperTest - 테스트 게시글
+11:01:29.224 [main] INFO  BoardMapperTest - 테스트 게시글
+11:01:29.224 [main] INFO  BoardMapperTest - 테스트 게시글
+11:01:29.224 [main] INFO  BoardMapperTest - 테스트 게시글
+11:01:29.224 [main] INFO  BoardMapperTest - 테스트 게시글
+11:01:29.224 [main] INFO  BoardMapperTest - 테스트 게시글
+11:01:29.274 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 5 msec}
+11:01:29.276 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+11:10:28.364 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 9 msec}
+11:10:28.393 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:28.395 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:28.395 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:28.395 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:28.395 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:28.396 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:28.396 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:28.396 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:28.396 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:28.396 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:28.415 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 5 msec}
+11:10:28.419 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+11:10:41.309 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 7 msec}
+11:10:41.333 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:41.335 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:41.335 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:41.335 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:41.335 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:41.335 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:41.336 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:41.336 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:41.336 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:41.336 [main] INFO  BoardMapperTest - 테스트 게시글
+11:10:41.355 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 5 msec}
+11:10:41.359 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+11:11:22.233 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 7 msec}
+11:11:22.257 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:22.259 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:22.259 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:22.259 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:22.259 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:22.259 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:22.259 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:22.259 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:22.259 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:22.259 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:22.291 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 6 msec}
+11:11:22.295 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+11:11:36.683 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 7 msec}
+11:11:36.716 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:36.718 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:36.719 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:36.719 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:36.719 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:36.721 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:36.721 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:36.722 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:36.722 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:36.722 [main] INFO  BoardMapperTest - 테스트 게시글
+11:11:36.733 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 5 msec}
+11:11:36.738 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+11:12:08.301 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 8 msec}
+11:12:08.325 [main] INFO  BoardMapperTest - 테스트 게시글
+11:12:08.327 [main] INFO  BoardMapperTest - 테스트 게시글
+11:12:08.327 [main] INFO  BoardMapperTest - 테스트 게시글
+11:12:08.327 [main] INFO  BoardMapperTest - 테스트 게시글
+11:12:08.327 [main] INFO  BoardMapperTest - 테스트 게시글
+11:12:08.327 [main] INFO  BoardMapperTest - 테스트 게시글
+11:12:08.327 [main] INFO  BoardMapperTest - 테스트 게시글
+11:12:08.327 [main] INFO  BoardMapperTest - 테스트 게시글
+11:12:08.327 [main] INFO  BoardMapperTest - 테스트 게시글
+11:12:08.328 [main] INFO  BoardMapperTest - 테스트 게시글
+11:12:08.360 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 6 msec}
+11:12:08.364 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+11:13:46.075 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 7 msec}
+11:13:46.098 [main] INFO  BoardMapperTest - 테스트 게시글
+11:13:46.100 [main] INFO  BoardMapperTest - 테스트 게시글
+11:13:46.100 [main] INFO  BoardMapperTest - 테스트 게시글
+11:13:46.101 [main] INFO  BoardMapperTest - 테스트 게시글
+11:13:46.101 [main] INFO  BoardMapperTest - 테스트 게시글
+11:13:46.101 [main] INFO  BoardMapperTest - 테스트 게시글
+11:13:46.101 [main] INFO  BoardMapperTest - 테스트 게시글
+11:13:46.101 [main] INFO  BoardMapperTest - 테스트 게시글
+11:13:46.101 [main] INFO  BoardMapperTest - 테스트 게시글
+11:13:46.101 [main] INFO  BoardMapperTest - 테스트 게시글
+11:13:46.134 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 5 msec}
+11:13:46.139 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+11:15:00.532 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 8 msec}
+11:15:00.560 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:00.562 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:00.562 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:00.562 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:00.562 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:00.562 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:00.562 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:00.562 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:00.562 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:00.562 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:00.593 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 7 msec}
+11:15:00.597 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+11:15:37.950 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 9 msec}
+11:15:37.976 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:37.977 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:37.978 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:37.978 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:37.978 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:37.978 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:37.978 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:37.978 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:37.978 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:37.978 [main] INFO  BoardMapperTest - 테스트 게시글
+11:15:38.000 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 5 msec}
+11:15:38.004 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+11:16:37.810 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2
+
+ 				and(
+
+ 							title like concat('%', 'html', '%')
+
+ 					or
+ 							content like concat('%', 'html', '%')
+
+ 					or
+ 							id like concat('%', 'html', '%')
+
+ 				) 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 29 msec}
+11:16:37.870 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 6 msec}
+11:16:37.873 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:37.875 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:37.875 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:37.875 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:37.875 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:37.875 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:37.875 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:37.875 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:37.875 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:37.875 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:37.892 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 5 msec}
+11:16:37.894 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+11:16:53.954 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2
+
+ 				and(
+
+ 							title like concat('%', 'html', '%')
+
+ 					or
+ 							content like concat('%', 'html', '%')
+
+ 					or
+ 							id like concat('%', 'html', '%')
+
+ 				) 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 37 msec}
+11:16:54.000 [main] INFO  BoardMapperTest - html
+11:16:54.001 [main] INFO  BoardMapperTest - html
+11:16:54.001 [main] INFO  BoardMapperTest - html
+11:16:54.001 [main] INFO  BoardMapperTest - html
+11:16:54.001 [main] INFO  BoardMapperTest - html
+11:16:54.001 [main] INFO  BoardMapperTest - html
+11:16:54.001 [main] INFO  BoardMapperTest - html
+11:16:54.001 [main] INFO  BoardMapperTest - html
+11:16:54.001 [main] INFO  BoardMapperTest - html
+11:16:54.002 [main] INFO  BoardMapperTest - html
+11:16:54.020 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 5 msec}
+11:16:54.024 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:54.024 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:54.024 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:54.024 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:54.024 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:54.024 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:54.025 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:54.025 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:54.025 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:54.025 [main] INFO  BoardMapperTest - 테스트 게시글
+11:16:54.035 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 7 msec}
+11:16:54.036 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+11:17:20.322 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2
+
+ 				and(
+
+ 							title like concat('%', 'html', '%')
+
+ 				) 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 36 msec}
+11:17:20.372 [main] INFO  BoardMapperTest - html
+11:17:20.373 [main] INFO  BoardMapperTest - html
+11:17:20.374 [main] INFO  BoardMapperTest - html
+11:17:20.374 [main] INFO  BoardMapperTest - html
+11:17:20.374 [main] INFO  BoardMapperTest - html
+11:17:20.375 [main] INFO  BoardMapperTest - html
+11:17:20.375 [main] INFO  BoardMapperTest - html
+11:17:20.375 [main] INFO  BoardMapperTest - html
+11:17:20.375 [main] INFO  BoardMapperTest - html
+11:17:20.375 [main] INFO  BoardMapperTest - html
+11:17:20.395 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 6 msec}
+11:17:20.400 [main] INFO  BoardMapperTest - 테스트 게시글
+11:17:20.400 [main] INFO  BoardMapperTest - 테스트 게시글
+11:17:20.400 [main] INFO  BoardMapperTest - 테스트 게시글
+11:17:20.400 [main] INFO  BoardMapperTest - 테스트 게시글
+11:17:20.400 [main] INFO  BoardMapperTest - 테스트 게시글
+11:17:20.400 [main] INFO  BoardMapperTest - 테스트 게시글
+11:17:20.401 [main] INFO  BoardMapperTest - 테스트 게시글
+11:17:20.401 [main] INFO  BoardMapperTest - 테스트 게시글
+11:17:20.401 [main] INFO  BoardMapperTest - 테스트 게시글
+11:17:20.401 [main] INFO  BoardMapperTest - 테스트 게시글
+11:17:20.410 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 6 msec}
+11:17:20.412 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+11:18:32.193 [main] INFO  BoardMapperTest - [T]
+11:18:32.283 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2
+
+ 				and(
+
+ 							title like concat('%', 'html', '%')
+
+ 				) 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 30 msec}
+11:18:32.324 [main] INFO  BoardMapperTest - html
+11:18:32.326 [main] INFO  BoardMapperTest - html
+11:18:32.326 [main] INFO  BoardMapperTest - html
+11:18:32.326 [main] INFO  BoardMapperTest - html
+11:18:32.326 [main] INFO  BoardMapperTest - html
+11:18:32.326 [main] INFO  BoardMapperTest - html
+11:18:32.326 [main] INFO  BoardMapperTest - html
+11:18:32.326 [main] INFO  BoardMapperTest - html
+11:18:32.326 [main] INFO  BoardMapperTest - html
+11:18:32.326 [main] INFO  BoardMapperTest - html
+11:18:32.346 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 7 msec}
+11:18:32.351 [main] INFO  BoardMapperTest - 테스트 게시글
+11:18:32.351 [main] INFO  BoardMapperTest - 테스트 게시글
+11:18:32.351 [main] INFO  BoardMapperTest - 테스트 게시글
+11:18:32.352 [main] INFO  BoardMapperTest - 테스트 게시글
+11:18:32.352 [main] INFO  BoardMapperTest - 테스트 게시글
+11:18:32.352 [main] INFO  BoardMapperTest - 테스트 게시글
+11:18:32.352 [main] INFO  BoardMapperTest - 테스트 게시글
+11:18:32.352 [main] INFO  BoardMapperTest - 테스트 게시글
+11:18:32.352 [main] INFO  BoardMapperTest - 테스트 게시글
+11:18:32.352 [main] INFO  BoardMapperTest - 테스트 게시글
+11:18:32.366 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 6 msec}
+11:18:32.369 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+11:22:43.267 [main] INFO  BoardMapperTest - [T, C, I]
+11:22:43.363 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2
+
+ 				and(
+
+ 							title like concat('%', 'html', '%')
+
+ 					or
+ 							content like concat('%', 'html', '%')
+
+ 					or
+ 							id like concat('%', 'html', '%')
+
+ 				) 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 30 msec}
+11:22:43.400 [main] INFO  BoardMapperTest - html
+11:22:43.401 [main] INFO  BoardMapperTest - html
+11:22:43.401 [main] INFO  BoardMapperTest - html
+11:22:43.402 [main] INFO  BoardMapperTest - html
+11:22:43.402 [main] INFO  BoardMapperTest - html
+11:22:43.402 [main] INFO  BoardMapperTest - html
+11:22:43.402 [main] INFO  BoardMapperTest - html
+11:22:43.402 [main] INFO  BoardMapperTest - html
+11:22:43.402 [main] INFO  BoardMapperTest - html
+11:22:43.402 [main] INFO  BoardMapperTest - html
+11:22:43.424 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 7 msec}
+11:22:43.428 [main] INFO  BoardMapperTest - 테스트 게시글
+11:22:43.429 [main] INFO  BoardMapperTest - 테스트 게시글
+11:22:43.429 [main] INFO  BoardMapperTest - 테스트 게시글
+11:22:43.429 [main] INFO  BoardMapperTest - 테스트 게시글
+11:22:43.429 [main] INFO  BoardMapperTest - 테스트 게시글
+11:22:43.429 [main] INFO  BoardMapperTest - 테스트 게시글
+11:22:43.429 [main] INFO  BoardMapperTest - 테스트 게시글
+11:22:43.429 [main] INFO  BoardMapperTest - 테스트 게시글
+11:22:43.429 [main] INFO  BoardMapperTest - 테스트 게시글
+11:22:43.429 [main] INFO  BoardMapperTest - 테스트 게시글
+11:22:43.437 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 6 msec}
+11:22:43.442 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+11:34:07.777 [main] INFO  BoardMapperTest - [T, I]
+11:34:07.875 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2
+
+ 				and(
+
+ 							title like concat('%', 'html', '%')
+
+ 					or
+ 							id like concat('%', 'html', '%')
+
+ 				) 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 34 msec}
+11:34:07.915 [main] INFO  BoardMapperTest - html
+11:34:07.917 [main] INFO  BoardMapperTest - html
+11:34:07.917 [main] INFO  BoardMapperTest - html
+11:34:07.917 [main] INFO  BoardMapperTest - html
+11:34:07.917 [main] INFO  BoardMapperTest - html
+11:34:07.917 [main] INFO  BoardMapperTest - html
+11:34:07.917 [main] INFO  BoardMapperTest - html
+11:34:07.917 [main] INFO  BoardMapperTest - html
+11:34:07.917 [main] INFO  BoardMapperTest - html
+11:34:07.918 [main] INFO  BoardMapperTest - html
+11:34:07.938 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 6 msec}
+11:34:07.942 [main] INFO  BoardMapperTest - 테스트 게시글
+11:34:07.942 [main] INFO  BoardMapperTest - 테스트 게시글
+11:34:07.942 [main] INFO  BoardMapperTest - 테스트 게시글
+11:34:07.943 [main] INFO  BoardMapperTest - 테스트 게시글
+11:34:07.943 [main] INFO  BoardMapperTest - 테스트 게시글
+11:34:07.943 [main] INFO  BoardMapperTest - 테스트 게시글
+11:34:07.943 [main] INFO  BoardMapperTest - 테스트 게시글
+11:34:07.943 [main] INFO  BoardMapperTest - 테스트 게시글
+11:34:07.943 [main] INFO  BoardMapperTest - 테스트 게시글
+11:34:07.943 [main] INFO  BoardMapperTest - 테스트 게시글
+11:34:07.954 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 9 msec}
+11:34:07.960 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+15:51:16.880 [main] INFO  BoardMapperTest - [T, I]
+15:51:16.990 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2
+
+ 				and(
+
+ 							title like concat('%', 'html', '%')
+
+ 					or
+ 							id like concat('%', 'html', '%')
+
+ 				) 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 34 msec}
+15:51:17.029 [main] INFO  BoardMapperTest - html
+15:51:17.031 [main] INFO  BoardMapperTest - html
+15:51:17.031 [main] INFO  BoardMapperTest - html
+15:51:17.031 [main] INFO  BoardMapperTest - html
+15:51:17.031 [main] INFO  BoardMapperTest - html
+15:51:17.031 [main] INFO  BoardMapperTest - html
+15:51:17.031 [main] INFO  BoardMapperTest - html
+15:51:17.031 [main] INFO  BoardMapperTest - html
+15:51:17.031 [main] INFO  BoardMapperTest - html
+15:51:17.031 [main] INFO  BoardMapperTest - html
+15:51:17.051 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 5 msec}
+15:51:17.057 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:17.057 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:17.057 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:17.058 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:17.058 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:17.058 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:17.058 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:17.058 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:17.058 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:17.058 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:17.066 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 6 msec}
+15:51:17.070 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+15:51:17.086 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1000
+ {executed in 6 msec}
+15:51:50.267 [main] INFO  BoardMapperTest - [T, I]
+15:51:50.367 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2
+
+ 				and(
+
+ 							title like concat('%', 'html', '%')
+
+ 					or
+ 							id like concat('%', 'html', '%')
+
+ 				) 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 35 msec}
+15:51:50.408 [main] INFO  BoardMapperTest - html
+15:51:50.410 [main] INFO  BoardMapperTest - html
+15:51:50.410 [main] INFO  BoardMapperTest - html
+15:51:50.410 [main] INFO  BoardMapperTest - html
+15:51:50.410 [main] INFO  BoardMapperTest - html
+15:51:50.410 [main] INFO  BoardMapperTest - html
+15:51:50.410 [main] INFO  BoardMapperTest - html
+15:51:50.410 [main] INFO  BoardMapperTest - html
+15:51:50.410 [main] INFO  BoardMapperTest - html
+15:51:50.410 [main] INFO  BoardMapperTest - html
+15:51:50.434 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 6 msec}
+15:51:50.439 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:50.439 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:50.439 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:50.439 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:50.439 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:50.439 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:50.439 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:50.439 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:50.440 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:50.440 [main] INFO  BoardMapperTest - 테스트 게시글
+15:51:50.447 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 5 msec}
+15:51:50.454 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+15:51:50.486 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 104
+ {executed in 5 msec}
+15:52:35.142 [main] INFO  BoardMapperTest - [T, I]
+15:52:35.224 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2
+
+ 				and(
+
+ 							title like concat('%', 'html', '%')
+
+ 					or
+ 							id like concat('%', 'html', '%')
+
+ 				) 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 30 msec}
+15:52:35.259 [main] INFO  BoardMapperTest - html
+15:52:35.261 [main] INFO  BoardMapperTest - html
+15:52:35.261 [main] INFO  BoardMapperTest - html
+15:52:35.261 [main] INFO  BoardMapperTest - html
+15:52:35.261 [main] INFO  BoardMapperTest - html
+15:52:35.261 [main] INFO  BoardMapperTest - html
+15:52:35.261 [main] INFO  BoardMapperTest - html
+15:52:35.261 [main] INFO  BoardMapperTest - html
+15:52:35.261 [main] INFO  BoardMapperTest - html
+15:52:35.261 [main] INFO  BoardMapperTest - html
+15:52:35.282 [main] INFO  sqltiming - select * from tbl_board
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 20
+ {executed in 6 msec}
+15:52:35.287 [main] INFO  BoardMapperTest - 테스트 게시글
+15:52:35.287 [main] INFO  BoardMapperTest - 테스트 게시글
+15:52:35.287 [main] INFO  BoardMapperTest - 테스트 게시글
+15:52:35.287 [main] INFO  BoardMapperTest - 테스트 게시글
+15:52:35.287 [main] INFO  BoardMapperTest - 테스트 게시글
+15:52:35.288 [main] INFO  BoardMapperTest - 테스트 게시글
+15:52:35.288 [main] INFO  BoardMapperTest - 테스트 게시글
+15:52:35.288 [main] INFO  BoardMapperTest - 테스트 게시글
+15:52:35.288 [main] INFO  BoardMapperTest - 테스트 게시글
+15:52:35.288 [main] INFO  BoardMapperTest - 테스트 게시글
+15:52:35.329 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1
+ {executed in 5 msec}
+15:52:35.333 [main] INFO  BoardMapperTest - Board(bno=1, title=테스트 게시글, content=본문 입니다, id=qwer, regdate=2025-06-12 17:38:06, moddate=2025-06-12 17:38:06, cnt=0, cno=2)
+15:52:35.380 [main] INFO  sqltiming - select * 
+ 		from tbl_board 
+ 		where bno = 1511
+ {executed in 6 msec}
+15:52:35.388 [main] INFO  sqltiming - update tbl_board set
+		title = '제목만 수정하기',
+		content = '수정내용',
+		moddate = now(),
+		cno = 2
+		where bno = 1511
+ {executed in 7 msec}

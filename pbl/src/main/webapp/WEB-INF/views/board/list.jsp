@@ -67,7 +67,7 @@
                     <div class="row text-center align-items-center small text-muted">
                         <span class="col-1 small fw-bold">${board.bno}</span>
                         <span class="col-1 small">${board.cno}</span>
-                        <span class="col text-start text-black">${board.title}</span>
+                        <span class="col text-start text-black">${board.title}<span class="small fw-bold text-danger ms-1">[1]</span></span>
                         <span class="col-1 small"><span class="small">
                         <fmt:parseDate value="${board.regdate}" pattern="yyyy-MM-dd HH:mm:ss" var="parsedDate"/>
                         <fmt:formatDate value="${parsedDate}" pattern="yy.MM.dd"/>
