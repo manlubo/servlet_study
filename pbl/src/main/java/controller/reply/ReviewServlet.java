@@ -75,10 +75,13 @@ public class ReviewServlet extends HttpServlet{
 		req.setCharacterEncoding("utf-8");
 		String ret = String.join("",req.getReader().lines().toList());
 		Reply reply = new Gson().fromJson(ret, Reply.class);
+		
+		// rno > null
 		new ReplyService().register(reply);
+		// rno > not null
 		
 		resp.setContentType("application/json; charset=utf-8");
-		resp.getWriter().print(new Gson().toJson(Map.of("result", true)));
+		resp.getWriter().print(new Gson().toJson(Map.of("result", true, "reply", reply)));
 	}
 
 	@Override
