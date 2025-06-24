@@ -3,7 +3,7 @@ html {overflow-x: hidden; scroll-behavior: smooth;}
 body {margin: 0;}
 a {text-decoration: none; color: #222;}
 header, footer {padding: 1em; background-color: #222; color: #eee; text-align: center;}
-.container {width: 1200px; margin: 0 auto;}
+.container {max-width: 1200px; margin: 0 auto;}
 .resize-none {resize: none;}
 
 /* cke 경고 무시 */
