@@ -44,6 +44,11 @@ vertical-align: top;
 .account div i {width: 1px; height: 12px; background: #d3d5d7; margin: 4px 8px 0; display: inline-block;}
 main::after {display: block; content: ''; clear: both;}
 
+.attach-area i{cursor :pointer;}
+.attach-thumb div div{background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;}
+
 /* misc */
 .arrow-area i {position: fixed; bottom: 100px; right: 20px; font-size: 3em; border-radius: 50%; color: #888; transition: all .3s; display: none; border-radius: 9999px; background-color: #fff;}
 .arrow-area i:hover{box-shadow: 0 0 6px #ccc; color: #222;}

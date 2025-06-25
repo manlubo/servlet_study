@@ -13,7 +13,7 @@
 <%@ include file="../common/nav.jsp" %>
 <div class="container p-0">
 	<main>
-        <form method="post">
+        <form method="post" id="writeForm">
             <div class="container d-flex flex-column my-4 p-0">
                 <div class="p-2 px-3 border-bottom border-2 border-black mb-3">
                     <a href="board.html" class="fw-bold">게시글 작성</a>
@@ -25,8 +25,13 @@
                     <textarea name="content" id="editor1" class="form-control resize-none"></textarea>
                 </div>
                 <div class="d-grid mb-4">
-                	<div class="my-2"><i class="fa-solid fa-paperclip"></i> 첨부파일</div>
-					<label class="btn btn-outline-dark">파일을 첨부하시려면 클릭 <input type="file" id="f1" class="d-none"  multiple></label>
+                	<div class="d-grid my-2 attach-area">
+						<label class="btn btn-outline-dark">파일첨부 <input type="file" id="f1" class="d-none"  multiple></label>
+						<ul class="list-group my-3 attach-list">
+						</ul>
+						<div class="row justify-content-around w-75 mx-auto attach-thumb">
+						</div>
+					</div>
 				</div>
                 <div class="py-4 border-top border-1">
                 	<a href="list?${cri.qs2 }" class="btn btn-secondary btn-sm float-end "> 취소</a>
@@ -34,6 +39,7 @@
                 </div>
                 <input type="hidden" name="id" value="${member.id }" />
                 <input type="hidden" name="cno" value="2" />
+				<input type="hidden" name="encodedStr" value="">
             </div>
 
         </form>
@@ -42,25 +48,7 @@
 </div>
 <%@ include file="../common/footer.jsp" %>
 <script>
-        $(".slider").bxSlider({
-            auto:true
-        });
-
-        $(window).scroll(function(e){
-            console.log(window.scrollY)
-            if(window.scrollY > 500){
-                $(".arrow-area i").fadeIn(200);
-            }
-            else{
-                $(".arrow-area i").hide(200)
-            }
-        })
-        window.onload = function(){
-            CKEDITOR.replace('editor1', {
-                height : 400
-            })
-        }
-
+        
     </script>
     <script type="text/javascript">
 	
@@ -122,14 +110,59 @@
 			contentType : false, // multipart/form-data; 이후에 나오게될 브라우저 정보도 포함시킨다, 즉 기본 브라우저 설정을 따르는 옵션.
 			success : function(data) {
 				// console.log(data);
-				for(let a in data){
-				 // $(".container").append("<p>" + data[a].origin + "</p>");
-				 console.log(a);
+				let str = "";
+				let thumbStr = "";
+				for(let a of data){
+				  //$(".container").append("<p>" + data[a].origin + "</p>");
+				  	str += `<li class="list-group-item d-flex align-items-center justify-content-between" 
+						data-uuid="\${a.uuid}"
+						data-origin="\${a.origin}"
+						data-image="\${a.image}"
+						data-path="\${a.path}"
+						data-odr="\${a.odr}"
+					>
+						<a href="${cp}/download?uuid=\${a.uuid}&origin=\${a.origin}&path=\${a.path}">\${a.origin}</a> 
+						<i class="fa-solid fa-xmark"></i>
+					</li>`;
+					if(a.image){
+						thumbStr += `<div class="my-2 col-12 col-sm-4 col-lg-2" data-uuid="\${a.uuid}">
+										<div class="my-2 bg-primary" style="height: 150px; background-image: url('${cp}/display?uuid=t_\${a.uuid}&path=\${a.path}')">
+											<i class="fa-solid fa-xmark float-end m-2"></i>
+										</div>
+									</div>`;
+					}
 				}
-					
+				console.log(thumbStr);
+				$(".attach-list").html(str);
+				$(".attach-thumb").html(thumbStr);
+				
+				// 이미지인 경우와 아닌경우
+
 			}
 		})
+
 	})
+		
+	$(".attach-area").on("click","i",function(){
+		const uuid = $(this).closest("[data-uuid]").data("uuid");
+		$('*[data-uuid="'+ uuid +'"]').remove();
+	})
+	
+	CKEDITOR.replace('editor1', {
+		height : 400
+	});
+    
+	$("#writeForm").submit(function(){
+		event.preventDefault();
+		const data = [];
+		$(".attach-list li").each(function(){
+			data.push({...this.dataset});
+		});
+		console.log(JSON.stringify(data));
+		$("[name='encodedStr']").val(JSON.stringify(data));
+		this.submit();
+	})
+
 </script>
 </body>
 </html>

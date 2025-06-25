@@ -55,6 +55,7 @@
 
 		return isValid;
 	}
+
 	$("#f1").change(function(){
 		event.preventDefault();
 		const formData = new FormData();
@@ -87,24 +88,41 @@
 			success : function(data) {
 				// console.log(data);
 				let str = "";
+				let thumbStr = "";
 				for(let a of data){
 				  //$(".container").append("<p>" + data[a].origin + "</p>");
 				  	str += `<li class="list-group-item d-flex align-items-center justify-content-between" 
-					data-uuid="\${a.uuid}"
-					data-origin="\${a.origin}"
-					data-image="\${a.image}"
-					data-path="\${a.path}"
-					data-odr="\${a.odr}"
+						data-uuid="\${a.uuid}"
+						data-origin="\${a.origin}"
+						data-image="\${a.image}"
+						data-path="\${a.path}"
+						data-odr="\${a.odr}"
 					>
-						<a href="${cp}/download">\${a.origin}</a> 
+						<a href="${cp}/download?uuid=\${a.uuid}&origin=\${a.origin}&path=\${a.path}">\${a.origin}</a> 
 						<i class="fa-solid fa-xmark"></i>
 					</li>`;
+					if(a.image){
+						thumbStr += `<div class="my-2 col-12 col-sm-4 col-lg-2" data-uuid="\${a.uuid}">
+										<div class="my-2 bg-primary" style="height: 150px; background-image: url('${cp}/display?uuid=t_\${a.uuid}&path=\${a.path}')">
+											<i class="fa-solid fa-xmark float-end m-2"></i>
+										</div>
+									</div>`;
+					}
 				}
-				$(".attach-list").html(str)
+				console.log(thumbStr);
+				$(".attach-list").html(str);
+				$(".attach-thumb").html(thumbStr);
+				
 				// 이미지인 경우와 아닌경우
 
 			}
 		})
+
+	})
+		
+	$(".attach-area").on("click","i",function(){
+		const uuid = $(this).closest("[data-uuid]").data("uuid");
+		$('*[data-uuid="'+ uuid +'"]').remove();
 	})
 </script>
 </html>

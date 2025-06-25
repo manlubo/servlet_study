@@ -33,6 +33,9 @@
  		insert into 
  		tbl_board(id, title, content, cno) 
  		values (#{id}, #{title}, #{content}, #{cno})
+ 		<selectKey keyProperty="bno" resultType="long" order="AFTER">
+ 		select max(bno) from tbl_board
+ 		</selectKey>
  	</insert>
  	
  	<!-- 목록 조회 -->
