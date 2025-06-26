@@ -27,7 +27,9 @@ public class BoardService {
 	public Board findByNo(Long bno) {
 		try(SqlSession session = MybatisUtil.getSqlSession()) {
 			BoardMapper mapper = session.getMapper(BoardMapper.class);
-			return mapper.selectOne(bno);
+			mapper.increseCnt(bno);
+			Board board = mapper.selectOne(bno);
+			return board;
 		}
 		catch (Exception e){
 			e.printStackTrace();
@@ -36,7 +38,8 @@ public class BoardService {
 	}
 	
 	public void write(Board board) {
-		try(SqlSession session = MybatisUtil.getSqlSession(false)) {
+		SqlSession session = MybatisUtil.getSqlSession(false);
+		try {
 			BoardMapper mapper = session.getMapper(BoardMapper.class);
 			mapper.insert(board);
 			AttachMapper attachMapper = session.getMapper(AttachMapper.class);
@@ -48,7 +51,11 @@ public class BoardService {
 			
 		}
 		catch (Exception e){
+			session.rollback();
 			e.printStackTrace();
+		}
+		finally {
+			session.close();
 		}
 	}
 	

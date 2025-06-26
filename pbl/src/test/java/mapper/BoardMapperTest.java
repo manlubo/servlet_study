@@ -1,13 +1,13 @@
 package mapper;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.jupiter.api.BeforeAll;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -33,7 +33,7 @@ public class BoardMapperTest { // 서비스와 매퍼는 테스트코드 쓰는�
 	@Test
 	public void testSelectOne() {
 		// given
-		Long bno = 1L;
+		Long bno = 2036L;
 		
 		// when
 		Board board = boardMapper.selectOne(bno);
@@ -48,13 +48,13 @@ public class BoardMapperTest { // 서비스와 매퍼는 테스트코드 쓰는�
 	@DisplayName("목록 조회 3페이지 10개씩 2번 카테고리")
 	public void testList() {
 		// given
-		Criteria cri = new Criteria(3, 10, 2);
+		Criteria cri = new Criteria(1, 10, 2);
 		
 		// when
 		List<Board> boards = boardMapper.list(cri);
 		
 		// then ~ actual, expect
-		boards.forEach(b -> log.info("{}", b.getTitle()));
+		boards.forEach(b -> log.info("{} {} {}", b.getAttachs(), b.getAttachCnt(), b.getReplyCnt()));
 	}
 		
 	@Test

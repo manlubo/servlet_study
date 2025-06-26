@@ -24,21 +24,27 @@ public class Board {
 	private String moddate; // 수정일
 	private Integer cnt; // 조회수
 	private Integer cno; // 카테고리 넘버
+	private Integer replyCnt; // 댓글 수
+	private Integer attachCnt; // 첨부파일 수
 	
 	@Builder.Default
 	private List<Attach> attachs = new ArrayList<Attach>();
 
 	public Board(Long bno, String title, String content, String id, String regdate, String moddate, Integer cnt,
-			Integer cno) {
+			Integer cno, Integer replyCnt, Integer attachCnt) {
 		this.bno = bno;
 		this.title = title;
 		this.content = content;
 		this.id = id;
 		this.regdate = regdate;
-		this.moddate = moddate;
+		this.moddate = moddate;	
 		this.cnt = cnt;
 		this.cno = cno;
+		this.replyCnt = replyCnt;
+		this.attachCnt = attachCnt;
 	}
+
+	
 	
 	
 }

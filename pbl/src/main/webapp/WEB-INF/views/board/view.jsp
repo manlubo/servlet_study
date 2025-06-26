@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +25,7 @@
                 <div class="small p-2 text-center border-2 border-bottom">
                     <span class="border-end float-start px-2 border-2 pe-3">${board.cno}</span>
                     <span class="text-start float-start px-3">${board.title}</span>
-                    <span class="float-end px-2 text-muted"><i class="fa-solid fa-comment"></i> 4</span>
+                    <span class="float-end px-2 text-muted"><i class="fa-solid fa-comment"></i> ${board.replyCnt } </span>
                     <span class="float-end px-2 text-muted"><i class="fa-solid fa-eye"></i> ${board.cnt}</span>
                 </div>
                 <div class="small bg-light p-2 px-3 text-muted">
@@ -38,7 +39,38 @@
                 <div class="p-3 border-bottom my-2">
                 	${board.content}
                 </div>
-          
+          		
+          		<c:if test="${not empty board.attachs }">
+          		<div class="d-grid my-2 attach-area">
+					<!--  <label class="btn btn-outline-dark">파일첨부 <input type="file" id="f1" class="d-none" multiple=""></label>-->
+					<ul class="list-group my-3 attach-list">
+						<c:forEach items="${board.attachs }" var="a">
+						<li class="list-group-item d-flex align-items-center justify-content-between" 
+						data-uuid="${a.uuid }" 
+						data-origin="${a.origin }" 
+						data-image="${a.image }" 
+						data-path="${a.path }" 
+						data-odr="${a.odr }">
+							<a href="/pbl/download?uuid=${a.uuid }&origin=${a.origin }&path=${a.path}">${a.origin }</a> 
+							<!-- <i class="fa-solid fa-xmark float-end m-2"></i>-->
+						</li>
+						</c:forEach>
+						
+					</ul>
+					<div class="row justify-content-around w-75 mx-auto attach-thumb">
+						<c:forEach items="${board.attachs }" var="a">
+						<c:if test="${a.image }">
+							<div class="my-2 col-12 col-sm-4 col-lg-2" data-uuid="${a.uuid }">
+								<div class="my-2 bg-primary" style="height: 150px; background-image: url('/pbl/display?uuid=t_${a.uuid }&path=${a.path }')">
+								</div>
+							</div>	
+						</c:if>
+						</c:forEach>
+					</div>
+				</div>
+				</c:if>
+					
+					
                 <div class="m-2 mt-3">
                     <a href="list?${cri.qs2 }" class="btn btn-dark btn-sm"><i class="fa-solid fa-list-ul small pe-1"></i> 목록</a>
                     <a href="modify?${cri.qs2 }&bno=${board.bno}" class="btn btn-outline-secondary btn-sm"><i class="fa-solid fa-pen-to-square small pe-1"></i> 수정</a>

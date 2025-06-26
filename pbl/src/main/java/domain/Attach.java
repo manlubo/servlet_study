@@ -2,13 +2,17 @@ package domain;
 
 import org.apache.ibatis.type.Alias;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
+
 
 @Data
 @Builder
 @Alias("attach")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Attach {
 	private String uuid; // 첨부파일 아이디
 	private String path; // 첨부파일 경로
@@ -18,12 +22,16 @@ public class Attach {
 	private Long rno; // 댓글 번호
 	private int odr; // 댓글 번호
 	
-	@Setter
-	private String info;
+	public Attach(String uuid, String path, boolean image, String origin, Long bno, int odr) {
 	
-	
-	public String getInfo() {
-		String[] strs = {"uuid=" + uuid, "path=" + path, "origin=" + origin};
-		return String.join("&", strs);
+		this.uuid = uuid;
+		this.path = path;
+		this.image = image;
+		this.origin = origin;
+		this.bno = bno;
+		this.odr = odr;
 	}
+	
+	
+	
 }
