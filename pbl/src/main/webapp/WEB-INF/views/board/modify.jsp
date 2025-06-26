@@ -13,7 +13,7 @@
 <%@ include file="../common/nav.jsp" %>
 <div class="container p-0">
 	<main>
-        <form method="post" action="modify" onsubmit="return confirm('수정하시겠습니까?')">
+        <form method="post" action="modify" onsubmit="return confirm('수정하시겠습니까?')" id="">
             <div class="container d-flex flex-column my-4 p-0">
                 <div class="p-2 px-3 border-bottom border-2 border-black mb-3">
                     <a href="board.html" class="fw-bold">게시글 수정</a>
@@ -48,6 +48,7 @@
 					data-origin="${a.origin }" 
 					data-image="${a.image }" 
 					data-path="${a.path }" 
+					data-size="${a.size }" 
 					data-odr="${a.odr }">
 						<a href="/pbl/download?uuid=${a.uuid }&origin=${a.origin }&path=${a.path}">${a.origin }</a> 
 						<i class="fa-solid fa-xmark float-end m-2"></i>
@@ -127,16 +128,33 @@
 		const formData = new FormData();
 		
 		console.log(formData);
-		const files = this.files;
+		const files = this.files; // 현제 인풋 타입 파일
+		
+		const data = []; // 기존 파일 목록이 들어갈 곳
+		$(".attach-list li").each(function(){
+			data.push({...this.dataset});
+		});
+		
+		console.log('기존', data);
+		console.log('신규', [...files]);
+		
+		
+		
+		const mixedFiles = [...data.map(d => {return {name:d.origin, size:d.size/1};}), ...files];
+		console.log(mixedFiles);
+		
 		for(let i = 0; i < files.length; i++){
 			formData.append("f1",files[i]);
 		}
 		
-		const valid = validateFiles([...files]);
+		
+		
+		const valid = validateFiles(mixedFiles);
 		
 		if(!valid) {
 			return;
 		}
+		return;
 		
 		
 		
@@ -162,6 +180,7 @@
 						data-origin="\${a.origin}"
 						data-image="\${a.image}"
 						data-path="\${a.path}"
+						data-size="\${a.size}"
 						data-odr="\${a.odr}"
 					>
 						<a href="${cp}/download?uuid=\${a.uuid}&origin=\${a.origin}&path=\${a.path}">\${a.origin}</a> 
@@ -195,7 +214,7 @@
 		height : 400
 	});
     
-	$("#writeForm").submit(function(){
+	$("#modifyForm").submit(function(){
 		event.preventDefault();
 		const data = [];
 		$(".attach-list li").each(function(){

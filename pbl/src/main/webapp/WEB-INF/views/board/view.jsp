@@ -50,6 +50,7 @@
 						data-origin="${a.origin }" 
 						data-image="${a.image }" 
 						data-path="${a.path }" 
+						data-size="${a.size }" 
 						data-odr="${a.odr }">
 							<a href="/pbl/download?uuid=${a.uuid }&origin=${a.origin }&path=${a.path}">${a.origin }</a> 
 							<!-- <i class="fa-solid fa-xmark float-end m-2"></i>-->

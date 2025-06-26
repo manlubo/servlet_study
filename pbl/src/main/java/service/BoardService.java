@@ -76,12 +76,27 @@ public class BoardService {
 	}
 
 	public void modify(Board board) {
-		try(SqlSession session = MybatisUtil.getSqlSession()) {
+		SqlSession session = MybatisUtil.getSqlSession();
+		try {
 			BoardMapper mapper = session.getMapper(BoardMapper.class);
 			mapper.update(board);
+			
+			AttachMapper attachMapper = session.getMapper(AttachMapper.class);
+			// 기존 첨부파일 메타데이터 제거
+			attachMapper.deleteByBno(board.getBno());
+			
+			board.getAttachs().forEach(a -> {
+				a.setBno(board.getBno());
+				attachMapper.insert(a);
+			});
+			session.commit();
 		}
 		catch (Exception e){
+			session.rollback();
 			e.printStackTrace();
+		}
+		finally {
+			session.close();
 		}
 	}
 	

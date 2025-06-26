@@ -23,6 +23,7 @@
  			<result column="origin" property="origin"/>
  			<result column="a_bno" property="bno"/>
  			<result column="odr" property="odr"/>
+ 			<result column="size" property="size"/>
  		</collection>
  	</resultMap>
  	<sql id="criteria">

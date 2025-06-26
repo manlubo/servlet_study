@@ -5,7 +5,7 @@
  <mapper namespace="mapper.AttachMapper">
  	<!-- 첨부파일 추가 -->
  	<insert id="insert">
-	 	insert into tbl_attach(uuid , origin, path, image, odr, bno) values (#{uuid} , #{origin}, #{path}, #{image}, #{odr}, #{bno})
+	 	insert into tbl_attach(uuid , origin, path, image, odr, bno, size) values (#{uuid} , #{origin}, #{path}, #{image}, #{odr}, #{bno}, #{size})
  	</insert>
  	
  	
