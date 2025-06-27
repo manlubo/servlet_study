@@ -13,10 +13,16 @@
 <%@ include file="../common/nav.jsp" %>
 <div class="container p-0">
 	<main>
-        <form method="post" action="modify" onsubmit="return confirm('수정하시겠습니까?')">
+        <form method="post" action="modify" id="modifyForm">
             <div class="container d-flex flex-column my-4 p-0">
                 <div class="p-2 px-3 border-bottom border-2 border-black mb-3">
-                    <a href="board.html" class="fw-bold">게시글 수정</a>
+
+                 <c:forEach items="${cate }" var="c">
+                 	<c:if test="${c.cno == cri.cno }">
+			        <a href="${cp }/board/list?cno=${c.cno}"><span class="fw-semibold">${c.cname }</span>게시글 수정</a>
+			        </c:if>
+		    	</c:forEach>
+                    
                 </div>
                 <div class="small p-2 text-center border border-bottom-0" id="editer">
                     <input type="text" name="title" id="title" class="form-control" placeholder="제목" value="${board.title }">
@@ -50,7 +56,7 @@
 					data-path="${a.path }" 
 					data-odr="${a.odr }">
 						<a href="/pbl/download?uuid=${a.uuid }&origin=${a.origin }&path=${a.path}">${a.origin }</a> 
-						<i class="fa-solid fa-xmark float-end m-2"></i>
+						<i class="fa-solid fa-xmark float-end"></i>
 					</li>
 					</c:forEach>
 					
@@ -72,6 +78,8 @@
     </main>
 </div>
 <%@ include file="../common/footer.jsp" %>
+<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+ 
 <script>
         $(".slider").bxSlider({
             auto:true
@@ -95,6 +103,7 @@
     </script>
    	<script type="text/javascript">
 	
+	$( ".attach-list" ).sortable();
 	// return true / false
 	function validateFiles(files) {
 		const MAX_COUNT = 5;
@@ -162,6 +171,7 @@
 						data-origin="\${a.origin}"
 						data-image="\${a.image}"
 						data-path="\${a.path}"
+						data-size="\${a.size}"
 						data-odr="\${a.odr}"
 					>
 						<a href="${cp}/download?uuid=\${a.uuid}&origin=\${a.origin}&path=\${a.path}">\${a.origin}</a> 
@@ -195,13 +205,16 @@
 		height : 400
 	});
     
-	$("#writeForm").submit(function(){
+	$("#modifyForm").submit(function(){
 		event.preventDefault();
+		if(!confirm("수정하시겠습니까?")){
+			return;
+		}
 		const data = [];
 		$(".attach-list li").each(function(){
 			data.push({...this.dataset});
 		});
-		console.log(JSON.stringify(data));
+		data.forEach((item,idx) => item.odr = idx);
 		$("[name='encodedStr']").val(JSON.stringify(data));
 		this.submit();
 	})
