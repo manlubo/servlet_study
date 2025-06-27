@@ -20,7 +20,12 @@
         <main>
             <div class="container d-flex flex-column my-4 p-0">
                 <div class="p-2 px-3 border-bottom border-2 border-black">
-                    <a href="board.html" class="small"><span class="fw-bold">${board.cno} </span>카테고리</a>
+                <c:forEach items="${cate }" var="c">
+                    	<c:if test="${c.cno == cri.cno}">
+                    			<a href="board.html" class="small"><span class="fw-bold">${c.cname} </span>카테고리</a>
+                    	</c:if>
+                    </c:forEach>
+                    		
                 </div>
                 <div class="small p-2 text-center border-2 border-bottom">
                     <span class="border-end float-start px-2 border-2 pe-3">${board.cno}</span>

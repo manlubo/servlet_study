@@ -81,6 +81,7 @@
 		from tbl_board b
 		left join tbl_attach a using(bno)
 		where bno = #{bno}
+		order by odr
  	</select>
  	
  	<update id="increseCnt">

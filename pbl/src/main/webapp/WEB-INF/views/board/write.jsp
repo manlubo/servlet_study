@@ -13,10 +13,16 @@
 <%@ include file="../common/nav.jsp" %>
 <div class="container p-0">
 	<main>
-        <form method="post" id="writeForm">
+        <form method="post" id="writeForm" action="write">
             <div class="container d-flex flex-column my-4 p-0">
                 <div class="p-2 px-3 border-bottom border-2 border-black mb-3">
-                    <a href="board.html" class="fw-bold">게시글 작성</a>
+                    <c:forEach items="${cate }" var="c">
+                    	<c:if test="${c.cno == cri.cno}">
+                    		<a href="${cp }/board/list?cno=${c.cno}" class="fw-bold">
+		                    	<span class="text-primary">${c.cname}</span>
+                    		게시글 작성</a>
+                    	</c:if>
+                    </c:forEach>
                 </div>
                 <div class="small p-2 text-center border border-bottom-0" id="editer">
                     <input type="text" name="title" id="title" class="form-control" placeholder="제목">
@@ -38,7 +44,9 @@
                     <button class="btn btn-dark btn-sm float-end me-2"><i class="fa-solid fa-pen pe-1 small"></i> 글쓰기</button>
                 </div>
                 <input type="hidden" name="id" value="${member.id }" />
-                <input type="hidden" name="cno" value="2" />
+                <input type="hidden" name="cno" value="${cri.cno }" />
+                <input type="hidden" name="page" value="1" />
+                <input type="hidden" name="amount" value="${cri.amount}" />
 				<input type="hidden" name="encodedStr" value="">
             </div>
 
@@ -50,8 +58,9 @@
 <script>
         
     </script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <script type="text/javascript">
-	
+    $( ".attach-list" ).sortable();
 	// return true / false
 	function validateFiles(files) {
 		const MAX_COUNT = 5;
@@ -119,6 +128,7 @@
 						data-origin="\${a.origin}"
 						data-image="\${a.image}"
 						data-path="\${a.path}"
+						data-path="\${a.size}"
 						data-odr="\${a.odr}"
 						data-size="\${a.size}"
 					>
@@ -159,7 +169,7 @@
 		$(".attach-list li").each(function(){
 			data.push({...this.dataset});
 		});
-		console.log(JSON.stringify(data));
+		data.forEach((item,idx) => item.odr = idx);
 		$("[name='encodedStr']").val(JSON.stringify(data));
 		this.submit();
 	})

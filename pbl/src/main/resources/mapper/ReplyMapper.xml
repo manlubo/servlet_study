@@ -22,6 +22,11 @@
  		DELETE from tbl_reply where rno = #{rno};
  	</delete>
  	
+ 	<!-- 글 삭제 시댓글 삭제 -->
+ 	<delete id="deleteByBno">
+ 		DELETE from tbl_reply where bno = #{bno};
+ 	</delete>
+ 	
  	<!-- 댓글 선택 -->
  	<select id="selectOne" resultType="reply">
  		SELECT * from tbl_reply where rno = #{rno}
