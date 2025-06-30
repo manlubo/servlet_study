@@ -17,7 +17,11 @@
                     <div class="row text-center align-items-center small text-muted">
                         <span class="col-1 small fw-bold">${board.bno}</span>
                         <span class="col-1 small">${board.cno}</span>
-                        <span class="col text-start text-black">${board.title}<span class="small fw-bold text-danger ms-1">[${board.replyCnt }]</span> 
+                        <span class="col text-start text-black">
+                        <c:if test="${board.bno != board.grp}">
+                        <i class="fa-solid fa-reply text-muted small" style="transform:rotate(180deg); margin-left: ${(board.depth - 2) * 16}px"></i>
+                        </c:if>
+                        ${board.title}<span class="small fw-bold text-danger ms-1">[${board.replyCnt }]</span> 
                         <c:if test="${board.attachCnt > 0}">
                         <i class="fa-solid fa-paperclip text-muted small ms-2"></i>
                         </c:if>

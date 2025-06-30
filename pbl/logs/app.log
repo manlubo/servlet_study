@@ -1,28 +1,247 @@
-11:34:15.758 [main] INFO  sqltiming - select bno, title, content, id, regdate, moddate, cnt, cno, 
- 		(select count(*) from tbl_reply r where r.bno = b.bno) replyCnt,
- 		(select count(*) from tbl_attach a where a.bno = b.bno) attachCnt,
-		(select uuid from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) uuid,
-		(select path from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) path
- 		from tbl_board b
-
- 		 WHERE cno = 2 
-
- 		order by bno desc 
- 		limit 10 
- 		offset 0
- {executed in 15 msec}
-11:34:15.788 [main] INFO  BoardMapperTest - [Attach(uuid=825ba3de-207c-44bb-816a-db44d1de2b58.jpg, path=2025/06/26, image=false, origin=null, bno=null, rno=null, odr=0)] 1 1
-11:34:15.801 [main] INFO  BoardMapperTest - [Attach(uuid=cb27b65d-1688-4b63-ac0a-c924f060b64c.jpg, path=2025/06/26, image=false, origin=null, bno=null, rno=null, odr=0)] 1 0
-11:34:15.801 [main] INFO  BoardMapperTest - [Attach(uuid=f9bb54d7-4fb4-43bf-95d9-134c8f3ebfa1.jpg, path=2025/06/25, image=false, origin=null, bno=null, rno=null, odr=0)] 3 0
-11:34:15.802 [main] INFO  BoardMapperTest - [] 0 0
-11:34:15.802 [main] INFO  BoardMapperTest - [] 0 0
-11:34:15.802 [main] INFO  BoardMapperTest - [] 0 69
-11:34:15.802 [main] INFO  BoardMapperTest - [] 0 1
-11:34:15.802 [main] INFO  BoardMapperTest - [] 0 1
-11:34:15.802 [main] INFO  BoardMapperTest - [] 0 0
-11:34:15.802 [main] INFO  BoardMapperTest - [] 0 0
-11:35:25.772 [main] INFO  sqltiming - select * from tbl_category tc  where tc.status  = 'ACTIVE' order by odr
- {executed in 14 msec}
-11:35:25.799 [main] INFO  CategoryMapperTest - Category(cno=1, cname=갤러리, regdate=2025-06-12 17:16:28, cViewType=LIST, odr=0, status=ACTIVE)
-11:35:25.807 [main] INFO  CategoryMapperTest - Category(cno=2, cname=자유게시판, regdate=2025-06-12 17:16:28, cViewType=LIST, odr=1, status=ACTIVE)
-11:35:25.808 [main] INFO  CategoryMapperTest - Category(cno=3, cname=Q&A, regdate=2025-06-12 17:16:29, cViewType=LIST, odr=2, status=ACTIVE)
+09:54:44.558 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=null, attachCnt=null, attachs=[])
+09:54:44.572 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=null, attachCnt=null, attachs=[])
+09:55:11.420 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
+09:55:11.426 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
+09:59:29.881 [main] INFO  ParamUtils - equals
+09:59:29.882 [main] INFO  ParamUtils - toString
+09:59:29.883 [main] INFO  ParamUtils - hashCode
+09:59:29.883 [main] INFO  ParamUtils - builder
+09:59:29.883 [main] INFO  ParamUtils - getId
+09:59:29.883 [main] INFO  ParamUtils - getContent
+09:59:29.883 [main] INFO  ParamUtils - getCnt
+09:59:29.884 [main] INFO  ParamUtils - getCno
+09:59:29.884 [main] INFO  ParamUtils - getModdate
+09:59:29.884 [main] INFO  ParamUtils - getTitle
+09:59:29.884 [main] INFO  ParamUtils - getRegdate
+09:59:29.884 [main] INFO  ParamUtils - setBno
+09:59:29.884 [main] INFO  ParamUtils - getBno
+09:59:29.884 [main] INFO  ParamUtils - setTitle
+09:59:29.884 [main] INFO  ParamUtils - setContent
+09:59:29.884 [main] INFO  ParamUtils - setId
+09:59:29.884 [main] INFO  ParamUtils - setRegdate
+09:59:29.884 [main] INFO  ParamUtils - setModdate
+09:59:29.885 [main] INFO  ParamUtils - setCnt
+09:59:29.885 [main] INFO  ParamUtils - setCno
+09:59:29.885 [main] INFO  ParamUtils - setAttachs
+09:59:29.885 [main] INFO  ParamUtils - getAttachs
+09:59:29.885 [main] INFO  ParamUtils - setReplyCnt
+09:59:29.885 [main] INFO  ParamUtils - getReplyCnt
+09:59:29.885 [main] INFO  ParamUtils - setAttachCnt
+09:59:29.885 [main] INFO  ParamUtils - getAttachCnt
+09:59:29.885 [main] INFO  ParamUtils - getClass
+09:59:29.885 [main] INFO  ParamUtils - notify
+09:59:29.885 [main] INFO  ParamUtils - notifyAll
+09:59:29.885 [main] INFO  ParamUtils - wait
+09:59:29.885 [main] INFO  ParamUtils - wait
+09:59:29.886 [main] INFO  ParamUtils - wait
+09:59:29.886 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=null, attachCnt=null, attachs=[])
+09:59:29.895 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=null, attachCnt=null, attachs=[])
+09:59:53.768 [main] INFO  ParamUtils - getAttachCnt
+09:59:53.769 [main] INFO  ParamUtils - setAttachCnt
+09:59:53.770 [main] INFO  ParamUtils - setReplyCnt
+09:59:53.770 [main] INFO  ParamUtils - getReplyCnt
+09:59:53.770 [main] INFO  ParamUtils - $default$attachs
+09:59:53.770 [main] INFO  ParamUtils - getModdate
+09:59:53.770 [main] INFO  ParamUtils - setRegdate
+09:59:53.770 [main] INFO  ParamUtils - getCnt
+09:59:53.770 [main] INFO  ParamUtils - setTitle
+09:59:53.770 [main] INFO  ParamUtils - getTitle
+09:59:53.770 [main] INFO  ParamUtils - setCnt
+09:59:53.770 [main] INFO  ParamUtils - setBno
+09:59:53.770 [main] INFO  ParamUtils - canEqual
+09:59:53.770 [main] INFO  ParamUtils - setModdate
+09:59:53.770 [main] INFO  ParamUtils - getCno
+09:59:53.771 [main] INFO  ParamUtils - setId
+09:59:53.771 [main] INFO  ParamUtils - setCno
+09:59:53.771 [main] INFO  ParamUtils - setAttachs
+09:59:53.771 [main] INFO  ParamUtils - getBno
+09:59:53.771 [main] INFO  ParamUtils - setContent
+09:59:53.771 [main] INFO  ParamUtils - getRegdate
+09:59:53.771 [main] INFO  ParamUtils - getAttachs
+09:59:53.771 [main] INFO  ParamUtils - equals
+09:59:53.771 [main] INFO  ParamUtils - toString
+09:59:53.771 [main] INFO  ParamUtils - hashCode
+09:59:53.771 [main] INFO  ParamUtils - builder
+09:59:53.771 [main] INFO  ParamUtils - getId
+09:59:53.771 [main] INFO  ParamUtils - getContent
+09:59:53.771 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=null, attachCnt=null, attachs=[])
+09:59:53.782 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=null, attachCnt=null, attachs=[])
+10:01:45.751 [main] INFO  ParamUtils - equals
+10:01:45.753 [main] INFO  ParamUtils - toString
+10:01:45.753 [main] INFO  ParamUtils - hashCode
+10:01:45.753 [main] INFO  ParamUtils - builder
+10:01:45.753 [main] INFO  ParamUtils - getId
+10:01:45.753 [main] INFO  ParamUtils - getContent
+10:01:45.753 [main] INFO  ParamUtils - setBno
+10:01:45.753 [main] INFO  ParamUtils - getRegdate
+10:01:45.753 [main] INFO  ParamUtils - getBno
+10:01:45.753 [main] INFO  ParamUtils - setRno
+10:01:45.754 [main] INFO  ParamUtils - setRegdate
+10:01:45.754 [main] INFO  ParamUtils - canEqual
+10:01:45.754 [main] INFO  ParamUtils - getRno
+10:01:45.754 [main] INFO  ParamUtils - setContent
+10:01:45.754 [main] INFO  ParamUtils - setId
+10:01:45.754 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=100)
+10:01:45.760 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=100)
+10:04:10.873 [main] INFO  ParamUtils - rno
+10:04:10.874 [main] INFO  ParamUtils - content
+10:04:10.874 [main] INFO  ParamUtils - id
+10:04:10.874 [main] INFO  ParamUtils - regdate
+10:04:10.874 [main] INFO  ParamUtils - bno
+10:04:10.874 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
+10:04:10.880 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
+10:04:54.776 [main] INFO  ParamUtils - class java.lang.Long, rno
+10:04:54.779 [main] INFO  ParamUtils - class java.lang.String, content
+10:04:54.779 [main] INFO  ParamUtils - class java.lang.String, id
+10:04:54.779 [main] INFO  ParamUtils - class java.lang.String, regdate
+10:04:54.779 [main] INFO  ParamUtils - class java.lang.Long, bno
+10:04:54.779 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
+10:04:54.783 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
+10:05:30.461 [main] INFO  ParamUtils - class java.lang.Long, bno
+10:05:30.463 [main] INFO  ParamUtils - class java.lang.String, title
+10:05:30.464 [main] INFO  ParamUtils - class java.lang.String, content
+10:05:30.464 [main] INFO  ParamUtils - class java.lang.String, id
+10:05:30.464 [main] INFO  ParamUtils - class java.lang.String, regdate
+10:05:30.464 [main] INFO  ParamUtils - class java.lang.String, moddate
+10:05:30.464 [main] INFO  ParamUtils - class java.lang.Integer, cnt
+10:05:30.464 [main] INFO  ParamUtils - class java.lang.Integer, cno
+10:05:30.464 [main] INFO  ParamUtils - class java.lang.Integer, replyCnt
+10:05:30.464 [main] INFO  ParamUtils - class java.lang.Integer, attachCnt
+10:05:30.464 [main] INFO  ParamUtils - interface java.util.List, attachs
+10:05:30.464 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=null, attachCnt=null, attachs=[])
+10:05:30.472 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=null, attachCnt=null, attachs=[])
+10:06:07.391 [main] INFO  ParamUtils - class java.lang.Long, bno
+10:06:07.393 [main] INFO  ParamUtils - class java.lang.String, title
+10:06:07.393 [main] INFO  ParamUtils - class java.lang.String, content
+10:06:07.393 [main] INFO  ParamUtils - class java.lang.String, id
+10:06:07.394 [main] INFO  ParamUtils - class java.lang.String, regdate
+10:06:07.394 [main] INFO  ParamUtils - class java.lang.String, moddate
+10:06:07.394 [main] INFO  ParamUtils - class java.lang.Integer, cnt
+10:06:07.395 [main] INFO  ParamUtils - class java.lang.Integer, cno
+10:06:07.395 [main] INFO  ParamUtils - int, replyCnt
+10:06:07.395 [main] INFO  ParamUtils - int, attachCnt
+10:06:07.395 [main] INFO  ParamUtils - interface java.util.List, attachs
+10:06:07.395 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=0, attachCnt=0, attachs=[])
+10:06:07.406 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=0, attachCnt=0, attachs=[])
+10:06:48.638 [main] INFO  ParamUtils - class java.lang.Long, bno
+10:06:48.642 [main] INFO  ParamUtils - null
+10:08:18.249 [main] INFO  ParamUtils - class java.lang.Long, bno
+10:08:18.252 [main] INFO  ParamUtils - class java.lang.String, title
+10:08:18.253 [main] INFO  ParamUtils - class java.lang.String, content
+10:08:18.253 [main] INFO  ParamUtils - class java.lang.String, id
+10:08:18.253 [main] INFO  ParamUtils - class java.lang.String, regdate
+10:08:18.253 [main] INFO  ParamUtils - class java.lang.String, moddate
+10:08:18.253 [main] INFO  ParamUtils - class java.lang.Integer, cnt
+10:08:18.253 [main] INFO  ParamUtils - class java.lang.Integer, cno
+10:08:18.253 [main] INFO  ParamUtils - int, replyCnt
+10:08:18.253 [main] INFO  ParamUtils - int, attachCnt
+10:08:18.253 [main] INFO  ParamUtils - interface java.util.List, attachs
+10:08:18.254 [main] INFO  ParamUtils - Board(bno=10, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=0, attachCnt=0, attachs=[])
+10:08:18.263 [main] INFO  ParamUtils - Board(bno=10, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=0, attachCnt=0, attachs=[])
+10:16:27.525 [main] INFO  ParamUtils - class java.lang.Long, bno
+10:16:27.532 [main] INFO  ParamUtils - null
+15:00:35.303 [main] INFO  sqltiming - select *, a.bno a_bno, (select count(*) from tbl_reply r where r.bno = b.bno) replyCnt
+		from tbl_board b
+		left join tbl_attach a using(bno)
+		where bno = 2062
+		order by odr
+ {executed in 10 msec}
+15:00:35.336 [main] INFO  sqltiming - select COALESCE(max(seq), 1) 
+		from tbl_board b
+		where grp = 2062
+		and seq >= 1
+		and depth >= 1
+		and not exists (
+			select 1
+			from tbl_board mid
+			where grp = b.grp
+			and seq >= 1
+			and seq < b.seq
+			and depth <= 1
+		)
+ {executed in 7 msec}
+15:00:35.338 [main] INFO  BoardMapperTest - 1
+15:00:59.123 [main] INFO  sqltiming - select *, a.bno a_bno, (select count(*) from tbl_reply r where r.bno = b.bno) replyCnt
+		from tbl_board b
+		left join tbl_attach a using(bno)
+		where bno = 2063
+		order by odr
+ {executed in 8 msec}
+15:00:59.151 [main] INFO  sqltiming - select COALESCE(max(seq), 2) 
+		from tbl_board b
+		where grp = 2062
+		and seq >= 2
+		and depth >= 2
+		and not exists (
+			select 1
+			from tbl_board mid
+			where grp = b.grp
+			and seq >= 2
+			and seq < b.seq
+			and depth <= 2
+		)
+ {executed in 7 msec}
+15:00:59.153 [main] INFO  BoardMapperTest - 2
+15:01:19.320 [main] INFO  sqltiming - select *, a.bno a_bno, (select count(*) from tbl_reply r where r.bno = b.bno) replyCnt
+		from tbl_board b
+		left join tbl_attach a using(bno)
+		where bno = 2064
+		order by odr
+ {executed in 8 msec}
+15:01:19.350 [main] INFO  sqltiming - select COALESCE(max(seq), 3) 
+		from tbl_board b
+		where grp = 2062
+		and seq >= 3
+		and depth >= 2
+		and not exists (
+			select 1
+			from tbl_board mid
+			where grp = b.grp
+			and seq >= 3
+			and seq < b.seq
+			and depth <= 2
+		)
+ {executed in 8 msec}
+15:01:19.352 [main] INFO  BoardMapperTest - 3
+15:01:29.364 [main] INFO  sqltiming - select *, a.bno a_bno, (select count(*) from tbl_reply r where r.bno = b.bno) replyCnt
+		from tbl_board b
+		left join tbl_attach a using(bno)
+		where bno = 2061
+		order by odr
+ {executed in 9 msec}
+15:01:29.394 [main] INFO  sqltiming - select COALESCE(max(seq), 1) 
+		from tbl_board b
+		where grp = 2061
+		and seq >= 1
+		and depth >= 1
+		and not exists (
+			select 1
+			from tbl_board mid
+			where grp = b.grp
+			and seq >= 1
+			and seq < b.seq
+			and depth <= 1
+		)
+ {executed in 9 msec}
+15:01:29.396 [main] INFO  BoardMapperTest - 1
+15:18:10.251 [main] INFO  sqltiming - select *, a.bno a_bno, (select count(*) from tbl_reply r where r.bno = b.bno) replyCnt
+		from tbl_board b
+		left join tbl_attach a using(bno)
+		where bno = 2062
+		order by odr
+ {executed in 8 msec}
+15:18:10.279 [main] INFO  sqltiming - select COALESCE(max(seq), 1) 
+		from tbl_board b
+		where grp = 2062
+		and seq > 1
+		and depth > 1
+		and not exists (
+			select 1
+			from tbl_board mid
+			where grp = b.grp
+			and seq > 1
+			and seq < b.seq
+			and depth <= 1
+		)
+ {executed in 6 msec}
+15:18:10.280 [main] INFO  BoardMapperTest - 5

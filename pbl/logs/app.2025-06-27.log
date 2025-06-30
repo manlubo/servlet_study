@@ -1,0 +1,28 @@
+11:34:15.758 [main] INFO  sqltiming - select bno, title, content, id, regdate, moddate, cnt, cno, 
+ 		(select count(*) from tbl_reply r where r.bno = b.bno) replyCnt,
+ 		(select count(*) from tbl_attach a where a.bno = b.bno) attachCnt,
+		(select uuid from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) uuid,
+		(select path from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) path
+ 		from tbl_board b
+
+ 		 WHERE cno = 2 
+
+ 		order by bno desc 
+ 		limit 10 
+ 		offset 0
+ {executed in 15 msec}
+11:34:15.788 [main] INFO  BoardMapperTest - [Attach(uuid=825ba3de-207c-44bb-816a-db44d1de2b58.jpg, path=2025/06/26, image=false, origin=null, bno=null, rno=null, odr=0)] 1 1
+11:34:15.801 [main] INFO  BoardMapperTest - [Attach(uuid=cb27b65d-1688-4b63-ac0a-c924f060b64c.jpg, path=2025/06/26, image=false, origin=null, bno=null, rno=null, odr=0)] 1 0
+11:34:15.801 [main] INFO  BoardMapperTest - [Attach(uuid=f9bb54d7-4fb4-43bf-95d9-134c8f3ebfa1.jpg, path=2025/06/25, image=false, origin=null, bno=null, rno=null, odr=0)] 3 0
+11:34:15.802 [main] INFO  BoardMapperTest - [] 0 0
+11:34:15.802 [main] INFO  BoardMapperTest - [] 0 0
+11:34:15.802 [main] INFO  BoardMapperTest - [] 0 69
+11:34:15.802 [main] INFO  BoardMapperTest - [] 0 1
+11:34:15.802 [main] INFO  BoardMapperTest - [] 0 1
+11:34:15.802 [main] INFO  BoardMapperTest - [] 0 0
+11:34:15.802 [main] INFO  BoardMapperTest - [] 0 0
+11:35:25.772 [main] INFO  sqltiming - select * from tbl_category tc  where tc.status  = 'ACTIVE' order by odr
+ {executed in 14 msec}
+11:35:25.799 [main] INFO  CategoryMapperTest - Category(cno=1, cname=갤러리, regdate=2025-06-12 17:16:28, cViewType=LIST, odr=0, status=ACTIVE)
+11:35:25.807 [main] INFO  CategoryMapperTest - Category(cno=2, cname=자유게시판, regdate=2025-06-12 17:16:28, cViewType=LIST, odr=1, status=ACTIVE)
+11:35:25.808 [main] INFO  CategoryMapperTest - Category(cno=3, cname=Q&A, regdate=2025-06-12 17:16:29, cViewType=LIST, odr=2, status=ACTIVE)

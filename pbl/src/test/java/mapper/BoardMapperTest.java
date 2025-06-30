@@ -81,5 +81,12 @@ public class BoardMapperTest { // 서비스와 매퍼는 테스트코드 쓰는�
 		boardMapper.update(board);
 	}
 
+	@Test
+	@DisplayName("max seq조회")
+	public void testSelectMaxSeq() {
+		Board parent = boardMapper.selectOne(2062L);
+		int maxSeq = boardMapper.selectMaxSeq(parent);
+		log.info("{}", maxSeq);
+	}
 	
 }

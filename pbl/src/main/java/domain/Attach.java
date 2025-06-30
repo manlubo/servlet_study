@@ -21,6 +21,7 @@ public class Attach {
 	private Long bno; // 게시글 번호
 	private Long rno; // 댓글 번호
 	private int odr; // 댓글 번호
+	private Long size;
 	
 	public Attach(String uuid, String path, boolean image, String origin, Long bno, int odr) {
 	

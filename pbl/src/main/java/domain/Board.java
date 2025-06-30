@@ -24,8 +24,16 @@ public class Board {
 	private String moddate; // 수정일
 	private Integer cnt; // 조회수
 	private Integer cno; // 카테고리 넘버
-	private Integer replyCnt; // 댓글 수
-	private Integer attachCnt; // 첨부파일 수
+	private int replyCnt; // 댓글 수
+	private int attachCnt; // 첨부파일 수
+	
+	// 답글을 위한 3개의 필드
+	private Long grp;
+	@Builder.Default
+	private int seq = 1;
+	@Builder.Default
+	private int depth = 1;
+	
 	
 	@Builder.Default
 	private List<Attach> attachs = new ArrayList<Attach>();

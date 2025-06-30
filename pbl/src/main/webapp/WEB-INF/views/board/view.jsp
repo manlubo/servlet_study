@@ -80,6 +80,7 @@
                     <a href="list?${cri.qs2 }" class="btn btn-dark btn-sm"><i class="fa-solid fa-list-ul small pe-1"></i> 목록</a>
                     <a href="modify?${cri.qs2 }&bno=${board.bno}" class="btn btn-outline-secondary btn-sm"><i class="fa-solid fa-pen-to-square small pe-1"></i> 수정</a>
                     <a href="remove?${cri.qs2 }&bno=${board.bno}" class="btn btn-outline-secondary btn-sm" onclick="return confirm('삭제하시겠습니까?')"><i class="fa-solid fa-trash small pe-1"></i> 삭제</a>
+                    <a href="write?${cri.qs2 }&bno=${board.bno}" class="btn btn-secondary me-2 btn-sm"><i class="fa-solid fa-reply text-white small" style="transform:rotate(180deg);"></i> 답글 작성</a>
                     <button class="btn btn-outline-secondary float-end btn-sm"><i class="fa-solid fa-share-nodes small pe-1"></i> 공유</button>
                     <button class="btn btn-outline-secondary float-end me-2 btn-sm"><i class="fa-regular fa-clipboard small pe-1"></i> 스크랩</button>
                 </div>

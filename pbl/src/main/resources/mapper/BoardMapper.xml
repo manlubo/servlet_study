@@ -14,6 +14,9 @@
  		<result column="cno" property="cno"/>
  		<result column="replyCnt" property="replyCnt"/>
  		<result column="attachCnt" property="attachCnt"/>
+ 		<result column="grp" property="grp"/>
+ 		<result column="seq" property="seq"/>
+ 		<result column="depth" property="depth"/>
  		
  		
  		<collection property="attachs" ofType="attach">
@@ -23,6 +26,7 @@
  			<result column="origin" property="origin"/>
  			<result column="a_bno" property="bno"/>
  			<result column="odr" property="odr"/>
+ 			<result column="size" property="size"/>
  		</collection>
  	</resultMap>
  	<sql id="criteria">
@@ -60,18 +64,58 @@
  		</selectKey>
  	</insert>
  	
+ 	<!-- 내 글번호를 grp로 -->
+ 	<update id="updateGrpMyself">
+ 	update tbl_board set grp = #{bno} where bno = #{bno}
+ 	</update>
+ 	
+ 	<!-- 답글 작성시 지정 위치에 seq취득 -->
+ 	<select id="selectMaxSeq" resultType="int">
+ 		select COALESCE(max(seq), #{seq}) 
+		from tbl_board b
+		where grp = #{grp}
+		and seq > #{seq}
+		and depth > #{depth}
+		and not exists (
+			select 1
+			from tbl_board mid
+			where grp = b.grp
+			and seq > #{seq}
+			and seq &lt; b.seq
+			and depth &lt;= #{depth}
+		)
+ 	</select>
+ 	
+ 	
+ 	
+ 	<!-- 답글이 되기위해 seq를 1증가 -->
+ 	<update id="updateSeqIncrease">
+ 		update tbl_board set seq = seq + 1 where grp = #{grp} and seq >= #{seq}
+ 	</update>
+ 	
+ 	<!-- 글 등록 -->
+ 	<insert id="insertChild">
+ 		insert into 
+ 		tbl_board(id, title, content, cno, grp, seq, depth) 
+ 		values (#{id}, #{title}, #{content}, #{cno}, #{grp}, #{seq}, #{depth})
+ 		<selectKey keyProperty="bno" resultType="long" order="AFTER">
+ 		select max(bno) from tbl_board
+ 		</selectKey>
+ 	</insert>
+ 	
+ 	
  	<!-- 목록 조회 -->
  	<select id="list" resultMap="b">
  		select bno, title, content, id, regdate, moddate, cnt, cno, 
  		(select count(*) from tbl_reply r where r.bno = b.bno) replyCnt,
  		(select count(*) from tbl_attach a where a.bno = b.bno) attachCnt,
 		(select uuid from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) uuid,
-		(select path from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) path
+		(select path from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) path,
+		grp, seq, depth
  		from tbl_board b
  		<include refid="criteria"/>
- 		order by bno desc 
- 		limit #{amount} 
- 		offset #{offset}
+ 		order by grp desc, seq
+ 		limit #{amount} offset #{offset}
  	</select>
  	
  	<!-- 단일 조회 -->

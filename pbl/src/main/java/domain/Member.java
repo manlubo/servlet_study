@@ -2,11 +2,18 @@ package domain;
 
 import java.util.Date;
 
+import org.apache.ibatis.type.Alias;
+
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
+@Alias("member")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Member {
  	private Long mno; // 멤버번호
 	private String id; // 아이디
