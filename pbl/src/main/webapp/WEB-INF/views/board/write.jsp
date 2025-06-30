@@ -133,6 +133,7 @@
 						data-path="\${a.path}"
 						data-path="\${a.size}"
 						data-odr="\${a.odr}"
+						data-size="\${a.size}"
 					>
 						<a href="${cp}/download?uuid=\${a.uuid}&origin=\${a.origin}&path=\${a.path}">\${a.origin}</a> 
 						<i class="fa-solid fa-xmark"></i>

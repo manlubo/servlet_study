@@ -102,16 +102,20 @@ public class BoardService {
 	}
 
 	public void modify(Board board) {
+
 		SqlSession session = MybatisUtil.getSqlSession(false);
 		try{
+
 			BoardMapper mapper = session.getMapper(BoardMapper.class);
 			mapper.update(board);
 			
 			AttachMapper attachMapper = session.getMapper(AttachMapper.class);
+
 			// 기존 첨부파일메타데이터 제거
 			attachMapper.deleteByBno(board.getBno());
 			
 			// 새로 첨부파일 메타데이터 등록
+
 			board.getAttachs().forEach(a -> {
 				a.setBno(board.getBno());
 				attachMapper.insert(a);
